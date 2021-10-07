@@ -45,7 +45,7 @@ canvas.translate(to: Point(x: canvas.width / 2,
                            y: canvas.height / 2))
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
  ## Add your code
@@ -58,20 +58,44 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+// Draw a circle, using the canvas object directly // fill in white
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawShapesWithBorders = true
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+//Draw Pandas head
+canvas.drawEllipse(at: Point(x: 0, y: 0), width: 100, height: 100)
 
-// Go back to origin
-p.goToOrigin()
+//Draw right eye
+canvas.drawEllipse(at: Point(x: 20,y: 15), width: 20, height: 30)
 
-// Change the pen color
-p.penColor = .red
+//Draw left eye
+canvas.drawEllipse(at: Point(x: -20,y: 15), width: 20, height: 30)
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+canvas.fillColor = .black
+
+//Draw inner eyes left
+
+canvas.drawEllipse(at: Point(x: -20,y: 8), width: 15, height: 15)
+
+//Draw inner eye right
+canvas.drawEllipse(at: Point(x: 20,y: 8), width: 15, height: 15)
+
+canvas.fillColor = .white
+
+//Draw Nose
+
+canvas.fillColor = .black
+
+canvas.drawEllipse(at: Point(x: 0,y: -6), width: 15, height: 15)
+
+p.goto(dx: -15, dy: -25)
+
+p.drawTo(dx: 30, dy: 0)
+
+p.goto(dx: 15, dy: 0)
+
+commit
 
 /*:
  ## Show the Live View
