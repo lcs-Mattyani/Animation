@@ -59,19 +59,65 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 // Begin writing your code below (you can remove the examples shown)
 
 // Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+//Middle triangle square thingys
 
-// Go back to origin
+//First attempt at filling this in
+
+canvas.fillColor = Color(hue: 0,
+                         saturation: 0,
+                         brightness: 0,
+                         alpha: 60)
+p.beginFill()
+p.drawTo(dx: -60, dy: 80)
+p.drawTo(dx: 60, dy: 80)
+p.drawTo(dx: 60, dy: -80)
+p.drawTo(dx: -60, dy: -80)
+
+
+p.drawTo(dx: -60, dy: -80)
+p.drawTo(dx: 60, dy: -80)
+p.drawTo(dx: 60, dy: 80)
+p.drawTo(dx: -60, dy: 80)
+p.endFill()
+
+
+//cube time #4
+
+p.drawTo(dx: 80, dy: 0)
+p.drawTo(dx: 60, dy: -80)
+p.drawTo(dx: -80, dy: 0)
+
+//cube time #2
+
+p.goto(dx: 20, dy: 80)
+p.drawTo(dx: 60, dy: 80)
+p.drawTo(dx: -80, dy: 0)
+p.drawTo(dx: -60, dy: -80)
+
+//cube time #11
+
+p.goto(dx: -140, dy: 80)
+p.drawTo(dx: 80, dy: 0)
+p.drawTo(dx: 60, dy: -80)
+p.drawTo(dx: -80, dy: 0)
+p.drawTo(dx: -60, dy: 80)
+
+//cube time # 6
+
 p.goToOrigin()
+p.goto(dx: -80, dy: 0)
+p.drawTo(dx: -60, dy: -80)
+p.drawTo(dx: 80, dy: 0)
 
-// Change the pen color
-p.penColor = .red
+//ARROW TIME #7
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+p.goto(dx: -80, dy: 0)
+p.turn(degrees: 129)
+p.addLine(distance: 50)
+
+p.drawTo(dx: -60, dy: 80)
+
 
 /*:
  ## Show the Live View

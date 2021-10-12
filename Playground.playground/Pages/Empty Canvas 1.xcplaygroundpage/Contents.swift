@@ -28,7 +28,7 @@ let p = Pen(drawingUpon: canvas)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
-
+ 
 /*:
  ## Optional code
  
@@ -89,13 +89,27 @@ canvas.fillColor = .black
 
 canvas.drawEllipse(at: Point(x: 0,y: -6), width: 15, height: 15)
 
-p.goto(dx: -15, dy: -25)
 
-p.drawTo(dx: 30, dy: 0)
+canvas.drawEllipse(at: Point(x: 0,y: -30), width: 35, height: 30)
 
-p.goto(dx: 15, dy: 0)
+//Drawing white block for smile
 
-commit
+
+p.goto(dx: 0, dy: -19)
+
+canvas.fillColor = .white
+canvas.borderColor = .white
+
+
+p.drawTo(dx: 0, dy: -10)
+p.drawTo(dx: 35, dy: 0)
+p.drawTo(dx: 0, dy: 15)
+p.drawTo(dx: -35, dy: 0)
+p.drawTo(dx: 0, dy: -10)
+
+
+
+
 
 /*:
  ## Show the Live View
