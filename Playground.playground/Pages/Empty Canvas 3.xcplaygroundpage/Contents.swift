@@ -64,6 +64,10 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 //First attempt at filling this in
 
+//Pen Color
+p.penColor = .black
+
+canvas.highPerformance = true
 canvas.fillColor = Color(hue: 0,
                          saturation: 0,
                          brightness: 0,
@@ -84,9 +88,14 @@ p.endFill()
 
 //cube time #4
 
+p.fillColor = .black
+p.beginFill()
+
 p.drawTo(dx: 80, dy: 0)
 p.drawTo(dx: 60, dy: -80)
 p.drawTo(dx: -80, dy: 0)
+
+p.endFill()
 
 //cube time #2
 
@@ -97,11 +106,18 @@ p.drawTo(dx: -60, dy: -80)
 
 //cube time #11
 
+
 p.goto(dx: -140, dy: 80)
+p.fillColor = .black
+p.beginFill()
+
+
 p.drawTo(dx: 80, dy: 0)
 p.drawTo(dx: 60, dy: -80)
 p.drawTo(dx: -80, dy: 0)
 p.drawTo(dx: -60, dy: 80)
+
+p.endFill()
 
 //cube time # 6
 
@@ -191,14 +207,158 @@ p.goToOrigin()
 
 p.goto(dx: 110, dy: -120)
 
+//  3D Thing for arrow number 9
+
+p.fillColor = .black
+p.beginFill()
 p.drawTo(dx: -30, dy: -40)
 
 p.drawTo(dx: 50, dy: 0)
 
 p.drawTo(dx: -20, dy: 40)
+p.endFill()
+
+p.goto(dx: 20, dy: -40)
+
+p.drawTo(dx: -150, dy: -80)
+p.drawTo(dx: -30, dy: 80)
+p.drawTo(dx: 50, dy: 0)
+
+//arrow number 7
+
+//3d thing
+
+p.goto(dx: -50, dy: 0)
 
 
 
+canvas.fillColor = Color(hue: 0,
+                         saturation: 0,
+                         brightness: 0,
+                         alpha: 60)
+
+p.beginFill()
+p.drawTo(dx: -30, dy: 0)
+p.drawTo(dx: 30, dy: -40)
+p.drawTo(dx: 0, dy: 40)
+
+p.endFill()
+
+//ok back to arrow
+
+p.goto(dx: 0, dy: -40)
+p.drawTo(dx: -140, dy: 80)
+p.drawTo(dx: 20, dy: 80)
+
+
+//Doing 3D thing for arrow 8
+
+
+p.drawTo(dx: -65, dy: 0)
+
+//ok time to start with filling
+
+
+p.goToOrigin()
+p.goto(dx: 0, dy: 160)
+
+
+p.fillColor = .black
+p.beginFill()
+
+p.drawTo(dx: 90, dy: 0)
+p.drawTo(dx: -40, dy: 45)
+p.drawTo(dx: 140, dy: -85)
+p.drawTo(dx: -20, dy: -80)
+p.drawTo(dx: -30, dy: 40)
+p.drawTo(dx: -80, dy: 0)
+p.drawTo(dx: -60, dy: 80)
+
+p.endFill()
+
+
+//ok filling in arrow # 3
+
+p.goToOrigin()
+p.goto(dx: 80, dy: 0)
+
+
+canvas.fillColor = Color(hue: 0,
+                         saturation: 0,
+                         brightness: 0,
+                         alpha: 60)
+p.beginFill()
+p.drawTo(dx: 60, dy: 80)
+p.drawTo(dx: 60, dy: -80)
+p.drawTo(dx: 35, dy: 50)
+p.drawTo(dx: 0, dy: -170)
+p.drawTo(dx: -125, dy: 0)
+p.drawTo(dx: 30, dy: 40)
+p.drawTo(dx: -60, dy: 80)
+p.endFill()
+
+//Next BLACK ARROW
+
+p.goToOrigin()
+p.goto(dx: -60, dy: -80)
+
+
+p.fillColor = .black
+p.beginFill()
+
+p.drawTo(dx: -80, dy: 0)
+p.drawTo(dx: -30, dy: 40)
+p.drawTo(dx: -20, dy: -80)
+p.drawTo(dx: 140, dy: -80)
+p.drawTo(dx: -30, dy: 40)
+p.drawTo(dx: 80, dy: 0)
+p.drawTo(dx: -60, dy: 80)
+
+p.endFill()
+
+
+// Ok so last arrow
+
+p.goToOrigin()
+
+p.goto(dx: -80, dy: 0)
+
+
+canvas.fillColor = Color(hue: 0,
+                         saturation: 0,
+                         brightness: 0,
+                         alpha: 60)
+p.beginFill()
+
+p.drawTo(dx: -60, dy: 80)
+p.drawTo(dx: 30, dy: 40)
+p.drawTo(dx: -125, dy: 0)
+p.drawTo(dx: 0, dy: -160)
+p.drawTo(dx: 35, dy: 40)
+p.drawTo(dx: 30, dy: -40)
+p.drawTo(dx: 30, dy: -40)
+p.drawTo(dx: 60, dy: 80)
+
+
+p.endFill()
+
+p.goToOrigin()
+
+p.goto(dx: 50, dy: 160)
+
+p.drawTo(dx: 0, dy: 45)
+
+
+
+
+
+
+
+
+
+
+
+canvas.highPerformance = false
 
 
 
