@@ -87,7 +87,8 @@ for someValue in stride(from: 0,
 }
 
 
-
+// canvas.highproformance mose =true
+//mske sure to write after ur codee u put canvas.highperfornmance = false 
 
 
 
