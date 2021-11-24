@@ -61,6 +61,63 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 
 
+//drawing the ground
+
+canvas.fillColor = Color(hue: 100,
+                         saturation: 20,
+                         brightness: 90,
+                         alpha: 100)
+
+
+canvas.drawRectangle(at: Point(x: -300, y: -300), width: 600, height: 240)
+
+//ok so now doing the different shades of blue ground
+
+canvas.fillColor = Color(hue: 200,
+                         saturation: 40,
+                         brightness: 90,
+                         alpha: 100)
+
+canvas.drawRectangle(at: Point(x: -300, y: -80), width: 600, height: 100)
+
+//ok so drawing more different shades of blue
+
+canvas.fillColor = Color(hue: 210,
+                         saturation: 40,
+                         brightness: 90,
+                         alpha: 100)
+
+canvas.drawRectangle(at: Point(x: -300, y: 20),
+                     width: 600, height: 120)
+
+//ok so last shade of blue
+
+canvas.fillColor = Color(hue: 220,
+                         saturation: 40,
+                         brightness: 90,
+                         alpha: 100)
+                         
+canvas.drawRectangle(at: Point(x: -300, y: 20),
+                        width: 600, height: 120)
+
+
+canvas.fillColor = .black
+
+
+canvas.drawEllipse(at: Point(x: 0, y: -20), width: 60, height: 30)
+
+canvas.fillColor = .black
+
+//adding leg behind body
+
+canvas.drawEllipse(at: Point(x: 0, y: -70), width: 40, height: 30)
+
+canvas.fillColor = .white
+canvas.drawShapesWithBorders = true
+
+//adding body
+
+canvas.drawEllipse(at: Point(x: 25, y: -30), width: 95, height: 120)
 
 //ear behind the panda head
 
@@ -75,6 +132,8 @@ canvas.drawEllipse(at: Point(x: 0, y: 78), width: 25, height: 30)
 canvas.fillColor = .white
 canvas.drawShapesWithBorders = true
 canvas.drawEllipse(at: Point(x: 0, y: 40), width: 80, height: 80)
+
+
 
 //adding nose
 canvas.fillColor = .black
@@ -99,7 +158,25 @@ canvas.drawEllipse(at: Point(x: 20, y: 80), width: 25, height: 30)
 // ASK MR GORDON ABT ADDING A SMILE
 //MAYBE ADD A BLUSH OR SMTHG LATER OK
 
-// adding body (SITTING)
+//iffy abt the body but lets add some arms mk
+
+canvas.fillColor = .black
+
+canvas.drawEllipse(at: Point(x: 20, y: -20), width: 60, height: 30)
+
+// foot
+
+canvas.drawEllipse(at: Point(x: 20, y: -80), width: 40, height: 30)
+
+//mkay trying the backround
+//so like I want a blue backround for like the sky maybe like different shades of blues?? like i can do a different block and fill it in
+//and like for the ground i can have the panda sitting on a gray rock basically a circle but like different width and lenghts
+//for bamboo im thinking do like a light green with strips in betweens
+
+//ok going to start with gray rock as seat
+//gray rock faile dso we did a shadow and its not half bas tho i lowkey hate it
+
+//a nyways now lets work on the green ground
 
 
 
@@ -107,64 +184,6 @@ canvas.drawEllipse(at: Point(x: 20, y: 80), width: 25, height: 30)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//p.addArc(radius: 40, angle: 360)
-//
-////adding nose of panda head
-//
-//
-//p.goToOrigin()
-//p.goto(dx: -40, dy: 25)
-//p.addArc(radius: 10, angle: 360)
-//
-//
-////adding eyes to the panda
-//
-//p.goToOrigin()
-//p.goto(dx: -10, dy: 40)
-//p.addArc(radius: 10, angle: 360)
-//
-////adding ears to the head
-//
-//p.goToOrigin()
-//p.goto(dx: 10, dy: 60)
-//p.addArc(radius: 15, angle: 270)
-//
-////body
-//
-//p.goToOrigin()
-//p.goto(dx: 90, dy: -10)
-//p.addArc(radius: 50, angle: -360)
-//
-////tail
-//
-//p.goToOrigin()
-//p.goto(dx: 85, dy: 0)
-//p.addArc(radius: 10, angle: 360)
-//
-////arms
-//
-//p.goToOrigin()
-//p.goto(dx: 20, dy: 0)
-//p.addArc(radius: 10, angle: -180)
 
 
 

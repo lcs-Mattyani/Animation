@@ -49,16 +49,31 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
-//Middle triangle square thingys
+for xPosition in stride(from: 0,
+                        through:700,
+                        by: 100){
+    
+    
+    //decide red or green
+    //kibrary to get code
+    //command shift L
+    if xPosition > 300{
+        canvas.lineColor = .green
+        
+    }else{
+        canvas.lineColor = .red
+        
+    }
+    
+    canvas.drawLine(from: Point(x: xPosition, y: 0),
+                    to: Point(x: xPosition, y: 300))
+    
+    
+}
 
-//First attempt at filling this in
 
-canvas.fillColor = .black
 
-p.drawTo(dx: -60, dy: 80)
-p.drawTo(dx: 60, dy: 80)
-p.drawTo(dx: -80, dy: 60)
-p.drawTo(dx: -60, dy: -80)
+
 
 
 
