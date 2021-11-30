@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -51,9 +51,9 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 
@@ -96,9 +96,9 @@ canvas.fillColor = Color(hue: 220,
                          saturation: 40,
                          brightness: 90,
                          alpha: 100)
-                         
+
 canvas.drawRectangle(at: Point(x: -300, y: 20),
-                        width: 600, height: 120)
+                     width: 600, height: 120)
 
 
 canvas.fillColor = .black
@@ -226,7 +226,7 @@ canvas.drawEllipse(at: Point(x: 20, y: -80), width: 40, height: 30)
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
