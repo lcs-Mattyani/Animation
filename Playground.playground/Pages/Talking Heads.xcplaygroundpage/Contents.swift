@@ -18,7 +18,7 @@ import PlaygroundSupport
 import CanvasGraphics
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+let canvas = Canvas(width: 400, height: 600)
 
 // Create a turtle that can draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
@@ -41,11 +41,9 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
+//canvas.translate(to: Point(x: canvas.width / 2,
+                           //y: canvas.height / 2))
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 /*:
  ## Add your code
@@ -56,35 +54,35 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
  */
 
-// Begin writing your code below (you can remove the examples shown)
+// ok so lets do the backround to build on
+//lets do this by filling in a rectangle
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+canvas.fillColor = Color(hue: 20,
+                         saturation: 90,
+                         brightness: 100,
+                         alpha: 100)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-// Go back to origin
-p.goToOrigin()
+//take time to think about the triangle positions and how to get them on here
 
-// Change the pen color
-p.penColor = .red
+//width of rectangles = 44.44...
+//anchor is 200
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+for xPosition in stride (from: 0, through: 400, by: 44.44){
+    for yPosition in stride(from: 200, through: 600, by: 44.44){
+        //make the triangles noticable by changing the colour
+        canvas.fillColor = .yellow
+        canvas.drawEllipse(at: Point(x: xPosition, y: yPosition), width: 5, height: 5)
+        
+  
+        
+     
+        
+    }
+}
 
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
 
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+// Show a grid
+canvas.drawAxes(withScale: true, by: 50, color: .white)
+
