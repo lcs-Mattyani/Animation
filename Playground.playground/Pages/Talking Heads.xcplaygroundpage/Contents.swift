@@ -75,7 +75,12 @@ for xPosition in stride (from: 0, through: 400, by: 44.44){
         canvas.fillColor = .yellow
         canvas.drawEllipse(at: Point(x: xPosition, y: yPosition), width: 5, height: 5)
         
-  
+        var triangleVertices: [Point] = []//Empty list of point
+        triangleVertices.append(Point(x: xPosition + 0, y: yPosition + 0))
+        triangleVertices.append(Point(x: xPosition + 44.44, y: yPosition + 0))
+        triangleVertices.append(Point(x: xPosition + 44.44, y: yPosition + 44.44))
+        //tell the canvas object to draw triangle
+        canvas.drawCustomShape(with: triangleVertices)
         
      
         
