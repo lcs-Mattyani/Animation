@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -42,38 +42,60 @@ PlaygroundPage.current.liveView = canvas
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
 //canvas.translate(to: Point(x: canvas.width / 2,
-                           //y: canvas.height / 2))
+//y: canvas.height / 2))
 
 
 /*:
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // ok so lets do the backround to build on
 //lets do this by filling in a rectangle
 
-canvas.fillColor = Color(hue: 20,
-                         saturation: 90,
-                         brightness: 100,
+canvas.fillColor = Color(hue: 13,
+                         saturation: 87.8,
+                         brightness: 96.1,
                          alpha: 100)
-
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 //take time to think about the triangle positions and how to get them on here
 
 //width of rectangles = 44.44...
 //anchor is 200
-
+canvas.highPerformance = true
 for xPosition in stride (from: 0, through: 400, by: 44.44){
     for yPosition in stride(from: 200, through: 600, by: 44.44){
         //make the triangles noticable by changing the colour
-        canvas.fillColor = .yellow
-        canvas.drawEllipse(at: Point(x: xPosition, y: yPosition), width: 5, height: 5)
+    
+        
+        if xPosition - yPosition == -288.88 ||
+            xPosition - yPosition == -244.44 ||
+            xPosition - yPosition == -333.32 ||
+            xPosition - yPosition == -377.76 ||
+            xPosition - yPosition == -422.2 ||
+            xPosition - yPosition == -466.64 ||
+            xPosition - yPosition == -511.08 ||
+            xPosition - yPosition == -555.52 {
+            
+            
+            canvas.fillColor = Color(hue: 82,
+                                     saturation: 4.9,
+                                     brightness: 88.2,
+                                     alpha: 100)
+            
+        } else
+        {
+            canvas.fillColor = Color(hue: 46,
+                                     saturation: 79.6,
+                                     brightness: 100,
+                                     alpha: 100)
+        }
+        
         
         var triangleVertices: [Point] = []//Empty list of point
         triangleVertices.append(Point(x: xPosition + 0, y: yPosition + 0))
@@ -82,12 +104,43 @@ for xPosition in stride (from: 0, through: 400, by: 44.44){
         //tell the canvas object to draw triangle
         canvas.drawCustomShape(with: triangleVertices)
         
-     
+        
+        
+        
         
     }
+    
+    
+ 
+    
 }
 
+canvas.textColor = Color(hue: 82,
+                                             saturation: 4.9,
+                                             brightness: 88.2,
+                                             alpha: 100)
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .white)
+canvas.drawText(message: "talking heads", at: Point(x: 25, y: 140), size: 38)
+
+canvas.drawText(message: "friday, saturday, sunday", at: Point(x: 20, y: 30), size: 9)
+
+canvas.drawText(message: "september 12, 13, 14, 1975 ", at: Point(x: 20, y: 10), size: 9)
+
+canvas.drawText(message: "at cbgb and omfug", at: Point(x: 150, y: 30), size: 9)
+
+canvas.drawText(message: "315 bowery, new york city", at: Point(x: 150, y: 10), size: 9)
+canvas.drawText(message: "also appearing:", at: Point(x: 280, y: 30), size: 9)
+
+canvas.drawText(message: "from brooklyn, the shirts", at: Point(x: 280, y: 10), size: 9)
+
+
+
+
+
+
+canvas.highPerformance = false
+
+
+
+
 
