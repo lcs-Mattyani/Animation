@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -58,7 +58,23 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-canvas.saveState()
+canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2))
+
+canvas.drawAxes(color: .black)
+
+canvas.fillColor = Color(hue: 0, saturation: 80, brightness: 90, alpha: 40)
+
+for _ in 1...10 {
+
+    
+    canvas.rotate(by: 36)
+    
+    canvas.drawRectangle(at: Point(x: 0, y: 0), width: 200, height: 20, anchoredBy: .centre, borderWidth: 1)
+
+    
+}
+
+
 
 
 /*:
