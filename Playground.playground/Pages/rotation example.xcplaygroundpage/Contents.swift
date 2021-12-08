@@ -68,7 +68,6 @@ for _ in 1...10 {
 
     
     canvas.rotate(by: 36)
-    
     canvas.drawRectangle(at: Point(x: 0, y: 0), width: 200, height: 20, anchoredBy: .centre, borderWidth: 1)
 
     
