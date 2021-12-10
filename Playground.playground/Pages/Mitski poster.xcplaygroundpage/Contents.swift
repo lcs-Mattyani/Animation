@@ -34,15 +34,6 @@ PlaygroundPage.current.liveView = canvas
 // Show a grid
 canvas.drawAxes(withScale: true, by: 50, color: .red)
 
-/*:
- ## Add your code
- 
- Beginning on line 61, you can add your own code.
-  
- [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
- */
-
 canvas.highPerformance = true
 
 //rectangleee
@@ -51,13 +42,12 @@ canvas.fillColor = .black
 
 canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
 
-
-
 //adding a function
 
-
 extension Canvas {
-    func drawMitskiPixels(xPosition: Int, yPosition: Int) {
+    func drawMitskiPixels(xPosition: Int,
+                          yPosition: Int,
+                          reductionFactor: Int) {
         
         //1
 
@@ -66,48 +56,42 @@ extension Canvas {
               brightness: 76,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //2
         canvas.fillColor = Color(hue: 326,
               saturation: 43,
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //3
         canvas.fillColor = Color(hue: 285,
               saturation: 51,
               brightness: 11,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //4
         canvas.fillColor = Color(hue: 254,
               saturation: 86,
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //5
         canvas.fillColor = Color(hue: 260,
               saturation: 79,
               brightness: 7,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //6
         canvas.fillColor = Color(hue: 17,
               saturation: 60,
               brightness: 38,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //7
 
         canvas.fillColor = Color(hue: 11,
@@ -115,8 +99,7 @@ extension Canvas {
               brightness: 65,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //8
 
         canvas.fillColor = Color(hue: 13,
@@ -124,8 +107,7 @@ extension Canvas {
               brightness: 58,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //9
 
         canvas.fillColor = Color(hue: 16,
@@ -133,32 +115,28 @@ extension Canvas {
               brightness: 70,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //10
         canvas.fillColor = Color(hue: 14,
               saturation: 47,
               brightness: 77,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //11
         canvas.fillColor = Color(hue: 20,
               saturation: 42,
               brightness: 83,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //12
         canvas.fillColor = Color(hue: 11,
               saturation: 59,
               brightness: 29,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //13
 
         canvas.fillColor = Color(hue: 347,
@@ -166,8 +144,7 @@ extension Canvas {
               brightness: 13,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //14
 
         canvas.fillColor = Color(hue: 336,
@@ -175,8 +152,7 @@ extension Canvas {
               brightness: 17,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //15
 
         canvas.fillColor = Color(hue: 346,
@@ -184,8 +160,7 @@ extension Canvas {
               brightness: 41,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //16
 
         canvas.fillColor = Color(hue: 356,
@@ -193,8 +168,7 @@ extension Canvas {
               brightness: 67,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 0), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 0 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW TWO
 
         //17
@@ -204,8 +178,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //18
 
         canvas.fillColor = Color(hue: 352,
@@ -213,8 +186,7 @@ extension Canvas {
               brightness: 60,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //19
 
         canvas.fillColor = Color(hue: 257,
@@ -222,8 +194,7 @@ extension Canvas {
               brightness: 11,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //20
 
         canvas.fillColor = Color(hue: 240,
@@ -231,8 +202,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //21
 
         canvas.fillColor = Color(hue: 292,
@@ -240,8 +210,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //22
 
         canvas.fillColor = Color(hue: 14,
@@ -249,8 +218,7 @@ extension Canvas {
               brightness: 49,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //23
 
         canvas.fillColor = Color(hue: 13,
@@ -258,8 +226,7 @@ extension Canvas {
               brightness: 67,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //24
 
         canvas.fillColor = Color(hue: 18,
@@ -267,8 +234,7 @@ extension Canvas {
               brightness: 84,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //25
 
         canvas.fillColor = Color(hue: 21,
@@ -276,16 +242,14 @@ extension Canvas {
               brightness: 94,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 25), width: 25, height: 25)
-        //26
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )        //26
 
         canvas.fillColor = Color(hue: 26,
               saturation: 25,
               brightness: 99,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //27
 
         canvas.fillColor = Color(hue: 25,
@@ -293,8 +257,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //28
 
         canvas.fillColor = Color(hue: 17,
@@ -302,8 +265,7 @@ extension Canvas {
               brightness: 39,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //29
 
         canvas.fillColor = Color(hue: 357,
@@ -311,8 +273,7 @@ extension Canvas {
               brightness: 23,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //30
 
         canvas.fillColor = Color(hue: 354,
@@ -320,8 +281,7 @@ extension Canvas {
               brightness: 22,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //31
 
         canvas.fillColor = Color(hue: 353,
@@ -329,8 +289,7 @@ extension Canvas {
               brightness: 39,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //32
 
         canvas.fillColor = Color(hue: 320,
@@ -338,8 +297,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 25), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 25 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW THREE
 
         //33
@@ -349,8 +307,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //34
 
 
@@ -359,8 +316,7 @@ extension Canvas {
               brightness: 36,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //35
 
 
@@ -369,8 +325,7 @@ extension Canvas {
               brightness: 10,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //36
 
         canvas.fillColor = Color(hue: 240,
@@ -378,8 +333,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //37
 
 
@@ -388,8 +342,7 @@ extension Canvas {
               brightness: 50,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
 
         //38
@@ -399,8 +352,7 @@ extension Canvas {
               brightness: 78,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //39
 
 
@@ -409,8 +361,7 @@ extension Canvas {
               brightness: 81,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //40
 
 
@@ -419,8 +370,7 @@ extension Canvas {
               brightness: 85,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //41
 
 
@@ -429,8 +379,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //42
 
 
@@ -439,8 +388,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //43
 
 
@@ -449,8 +397,7 @@ extension Canvas {
               brightness: 98,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //44
 
 
@@ -459,8 +406,7 @@ extension Canvas {
               brightness: 87,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 50), width: 25, height: 25)
-         
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //45
 
 
@@ -469,8 +415,7 @@ extension Canvas {
               brightness: 25,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //46
 
 
@@ -479,8 +424,7 @@ extension Canvas {
               brightness: 13,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //47
 
         canvas.fillColor = Color(hue: 341,
@@ -488,8 +432,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //48
 
         canvas.fillColor = Color(hue: 301,
@@ -497,8 +440,7 @@ extension Canvas {
               brightness: 13,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 50), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 50 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW FOUR BESTIES AYYEEE
 
         //49
@@ -509,8 +451,7 @@ extension Canvas {
               brightness: 82,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         //50
 
@@ -520,8 +461,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //51
 
 
@@ -530,8 +470,7 @@ extension Canvas {
               brightness: 9,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //52
 
 
@@ -540,8 +479,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //53
 
 
@@ -550,8 +488,7 @@ extension Canvas {
               brightness: 77,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //54
 
 
@@ -560,8 +497,7 @@ extension Canvas {
               brightness: 84,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         //55
 
@@ -571,8 +507,7 @@ extension Canvas {
               brightness: 71,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //56
 
 
@@ -581,8 +516,7 @@ extension Canvas {
               brightness: 48,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //57
 
         canvas.fillColor = Color(hue: 3,
@@ -590,8 +524,7 @@ extension Canvas {
               brightness: 72,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //58
 
 
@@ -600,8 +533,7 @@ extension Canvas {
               brightness: 82,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //59
 
 
@@ -610,8 +542,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //60
 
 
@@ -620,8 +551,7 @@ extension Canvas {
               brightness: 98,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //61
 
 
@@ -630,8 +560,7 @@ extension Canvas {
               brightness: 43,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //62
 
 
@@ -640,8 +569,7 @@ extension Canvas {
               brightness: 9,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //63
 
 
@@ -650,8 +578,7 @@ extension Canvas {
               brightness: 16,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //64
 
 
@@ -660,8 +587,7 @@ extension Canvas {
               brightness: 41,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 75), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 75 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW FIVE !
 
         //65
@@ -671,8 +597,7 @@ extension Canvas {
               brightness: 62,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //66
 
         canvas.fillColor = Color(hue: 337,
@@ -680,8 +605,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //67
 
         canvas.fillColor = Color(hue: 223,
@@ -689,8 +613,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         //68
 
@@ -699,8 +622,7 @@ extension Canvas {
               brightness: 34,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //69
 
         canvas.fillColor = Color(hue: 11,
@@ -708,8 +630,7 @@ extension Canvas {
               brightness: 78,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //70
 
         canvas.fillColor = Color(hue: 17,
@@ -717,8 +638,7 @@ extension Canvas {
               brightness: 85,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //71
 
         canvas.fillColor = Color(hue: 18,
@@ -726,8 +646,7 @@ extension Canvas {
               brightness: 88,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //72
 
         canvas.fillColor = Color(hue: 15,
@@ -735,8 +654,7 @@ extension Canvas {
               brightness: 78,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //73
 
         canvas.fillColor = Color(hue: 18,
@@ -744,8 +662,7 @@ extension Canvas {
               brightness: 90,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //74
 
         canvas.fillColor = Color(hue: 27,
@@ -753,8 +670,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //75
 
         canvas.fillColor = Color(hue: 27,
@@ -762,8 +678,7 @@ extension Canvas {
               brightness: 98,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //76
 
         canvas.fillColor = Color(hue: 26,
@@ -771,8 +686,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //77
 
         canvas.fillColor = Color(hue: 11,
@@ -780,8 +694,7 @@ extension Canvas {
               brightness: 54,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //78
 
         canvas.fillColor = Color(hue: 348,
@@ -789,8 +702,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //79
 
         canvas.fillColor = Color(hue: 335,
@@ -798,8 +710,7 @@ extension Canvas {
               brightness: 14,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //80
 
         canvas.fillColor = Color(hue: 340,
@@ -807,8 +718,7 @@ extension Canvas {
               brightness: 25,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 100), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 100 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 6
 
         //81
@@ -818,8 +728,7 @@ extension Canvas {
               brightness: 67,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //82
 
         canvas.fillColor = Color(hue: 336,
@@ -827,8 +736,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //83
 
         canvas.fillColor = Color(hue: 231,
@@ -836,8 +744,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //84
 
         canvas.fillColor = Color(hue: 0,
@@ -845,8 +752,7 @@ extension Canvas {
               brightness: 41,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //85
 
         canvas.fillColor = Color(hue: 9,
@@ -854,8 +760,7 @@ extension Canvas {
               brightness: 78,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //86
 
         canvas.fillColor = Color(hue: 17,
@@ -863,8 +768,7 @@ extension Canvas {
               brightness: 88,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //87
 
         canvas.fillColor = Color(hue: 18,
@@ -872,8 +776,7 @@ extension Canvas {
               brightness: 91,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //88
 
         canvas.fillColor = Color(hue: 14,
@@ -881,8 +784,7 @@ extension Canvas {
               brightness: 68,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //89
 
         canvas.fillColor = Color(hue: 21,
@@ -890,8 +792,7 @@ extension Canvas {
               brightness: 87,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //90
 
         canvas.fillColor = Color(hue: 24,
@@ -899,8 +800,7 @@ extension Canvas {
               brightness: 87,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //91
 
         canvas.fillColor = Color(hue: 23,
@@ -908,8 +808,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //92
 
         canvas.fillColor = Color(hue: 22,
@@ -917,8 +816,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //93
 
         canvas.fillColor = Color(hue: 9,
@@ -926,8 +824,7 @@ extension Canvas {
               brightness: 38,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //94
 
         canvas.fillColor = Color(hue: 346,
@@ -935,8 +832,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //95
 
         canvas.fillColor = Color(hue: 308,
@@ -944,8 +840,7 @@ extension Canvas {
               brightness: 11,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //96
 
         canvas.fillColor = Color(hue: 334,
@@ -953,8 +848,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 125), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 125 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW NUMBER SEVEN
 
         //97
@@ -964,8 +858,7 @@ extension Canvas {
               brightness: 75,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //98
 
         canvas.fillColor = Color(hue: 344,
@@ -973,8 +866,7 @@ extension Canvas {
               brightness: 24,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //99
 
         canvas.fillColor = Color(hue: 244,
@@ -982,8 +874,7 @@ extension Canvas {
               brightness: 9,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //100
 
         canvas.fillColor = Color(hue: 3,
@@ -991,8 +882,7 @@ extension Canvas {
               brightness: 48,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //101
 
         canvas.fillColor = Color(hue: 11,
@@ -1000,8 +890,7 @@ extension Canvas {
               brightness: 82,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //102
 
         canvas.fillColor = Color(hue: 17,
@@ -1009,8 +898,7 @@ extension Canvas {
               brightness: 93,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //103
 
         canvas.fillColor = Color(hue: 17,
@@ -1018,8 +906,7 @@ extension Canvas {
               brightness: 89,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //104
 
         canvas.fillColor = Color(hue: 14,
@@ -1027,8 +914,7 @@ extension Canvas {
               brightness: 74,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //105
 
         canvas.fillColor = Color(hue: 20,
@@ -1036,8 +922,7 @@ extension Canvas {
               brightness: 93,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //106
 
         canvas.fillColor = Color(hue: 26,
@@ -1045,8 +930,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //107
 
         canvas.fillColor = Color(hue: 20,
@@ -1054,8 +938,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //108
 
         canvas.fillColor = Color(hue: 18,
@@ -1063,8 +946,7 @@ extension Canvas {
               brightness: 75,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //109
 
         canvas.fillColor = Color(hue: 353,
@@ -1072,8 +954,7 @@ extension Canvas {
               brightness: 20,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //110
 
         canvas.fillColor = Color(hue: 354,
@@ -1081,8 +962,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //111
 
         canvas.fillColor = Color(hue: 335,
@@ -1090,8 +970,7 @@ extension Canvas {
               brightness: 16,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //112
 
         canvas.fillColor = Color(hue: 323,
@@ -1099,8 +978,7 @@ extension Canvas {
               brightness: 17,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 150), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 150 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW EIGHT
 
         //13
@@ -1110,8 +988,7 @@ extension Canvas {
               brightness: 85,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //14
 
         canvas.fillColor = Color(hue: 351,
@@ -1119,8 +996,7 @@ extension Canvas {
               brightness: 29,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //15
 
         canvas.fillColor = Color(hue: 270,
@@ -1128,8 +1004,7 @@ extension Canvas {
               brightness: 9,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //16
 
         canvas.fillColor = Color(hue: 3,
@@ -1137,8 +1012,7 @@ extension Canvas {
               brightness: 50,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //17
 
         canvas.fillColor = Color(hue: 15,
@@ -1146,8 +1020,7 @@ extension Canvas {
               brightness: 85,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //18
 
         canvas.fillColor = Color(hue: 20,
@@ -1155,8 +1028,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //19
 
         canvas.fillColor = Color(hue: 18,
@@ -1164,8 +1036,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //20
 
         canvas.fillColor = Color(hue: 17,
@@ -1173,8 +1044,7 @@ extension Canvas {
               brightness: 82,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //21
 
         canvas.fillColor = Color(hue: 19,
@@ -1182,8 +1052,7 @@ extension Canvas {
               brightness: 94,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //22
 
         canvas.fillColor = Color(hue: 25,
@@ -1191,8 +1060,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //23
 
         canvas.fillColor = Color(hue: 18,
@@ -1200,8 +1068,7 @@ extension Canvas {
               brightness: 84,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //24
 
         canvas.fillColor = Color(hue: 11,
@@ -1209,8 +1076,7 @@ extension Canvas {
               brightness: 42,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //25
 
         canvas.fillColor = Color(hue: 0,
@@ -1218,8 +1084,7 @@ extension Canvas {
               brightness: 26,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //26
 
         canvas.fillColor = Color(hue: 353,
@@ -1227,8 +1092,7 @@ extension Canvas {
               brightness: 28,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //27
 
         canvas.fillColor = Color(hue: 336,
@@ -1236,8 +1100,7 @@ extension Canvas {
               brightness: 24,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //28
 
         canvas.fillColor = Color(hue: 319,
@@ -1245,8 +1108,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 175), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 175 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW NINE
 
         //29
@@ -1256,8 +1118,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //30
 
         canvas.fillColor = Color(hue: 356,
@@ -1265,8 +1126,7 @@ extension Canvas {
               brightness: 43,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         //31
 
@@ -1275,8 +1135,7 @@ extension Canvas {
               brightness: 12,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //32
 
         canvas.fillColor = Color(hue: 354,
@@ -1284,8 +1143,7 @@ extension Canvas {
               brightness: 33,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //33
 
         canvas.fillColor = Color(hue: 14,
@@ -1293,8 +1151,7 @@ extension Canvas {
               brightness: 73,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //34
 
         canvas.fillColor = Color(hue: 9,
@@ -1302,8 +1159,7 @@ extension Canvas {
               brightness: 45,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //35
 
         canvas.fillColor = Color(hue: 13,
@@ -1311,8 +1167,7 @@ extension Canvas {
               brightness: 56,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //36
 
         canvas.fillColor = Color(hue: 17,
@@ -1320,8 +1175,7 @@ extension Canvas {
               brightness: 77,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //37
 
         canvas.fillColor = Color(hue: 20,
@@ -1329,8 +1183,7 @@ extension Canvas {
               brightness: 92,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //38
 
         canvas.fillColor = Color(hue: 22,
@@ -1338,8 +1191,7 @@ extension Canvas {
               brightness: 90,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //39
 
         canvas.fillColor = Color(hue: 11,
@@ -1347,8 +1199,7 @@ extension Canvas {
               brightness: 36,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //40
 
         canvas.fillColor = Color(hue: 337,
@@ -1356,8 +1207,7 @@ extension Canvas {
               brightness: 17,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //41
 
         canvas.fillColor = Color(hue: 0,
@@ -1365,8 +1215,7 @@ extension Canvas {
               brightness: 32,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //42
 
         canvas.fillColor = Color(hue: 4,
@@ -1374,8 +1223,7 @@ extension Canvas {
               brightness: 32,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //43
 
         canvas.fillColor = Color(hue: 341,
@@ -1383,8 +1231,7 @@ extension Canvas {
               brightness: 31,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //44
 
         canvas.fillColor = Color(hue: 333,
@@ -1392,8 +1239,7 @@ extension Canvas {
               brightness: 26,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 200), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 200 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         //ROW TEN
 
@@ -1404,8 +1250,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //46
 
         canvas.fillColor = Color(hue: 358,
@@ -1413,8 +1258,7 @@ extension Canvas {
               brightness: 68,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //47
 
         canvas.fillColor = Color(hue: 310,
@@ -1422,8 +1266,7 @@ extension Canvas {
               brightness: 12,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //48
 
         canvas.fillColor = Color(hue: 339,
@@ -1431,8 +1274,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //49
 
         canvas.fillColor = Color(hue: 9,
@@ -1440,8 +1282,7 @@ extension Canvas {
               brightness: 72,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //50
 
         canvas.fillColor = Color(hue: 9,
@@ -1449,8 +1290,7 @@ extension Canvas {
               brightness: 56,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //51
 
         canvas.fillColor = Color(hue: 13,
@@ -1458,8 +1298,7 @@ extension Canvas {
               brightness: 70,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //52
 
         canvas.fillColor = Color(hue: 18,
@@ -1467,8 +1306,7 @@ extension Canvas {
               brightness: 82,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //53
 
         canvas.fillColor = Color(hue: 21,
@@ -1476,8 +1314,7 @@ extension Canvas {
               brightness: 91,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //54
 
         canvas.fillColor = Color(hue: 21,
@@ -1485,8 +1322,7 @@ extension Canvas {
               brightness: 90,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //55
 
         canvas.fillColor = Color(hue: 13,
@@ -1494,8 +1330,7 @@ extension Canvas {
               brightness: 49,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //56
 
         canvas.fillColor = Color(hue: 341,
@@ -1503,8 +1338,7 @@ extension Canvas {
               brightness: 22,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //57
 
         canvas.fillColor = Color(hue: 0,
@@ -1512,8 +1346,7 @@ extension Canvas {
               brightness: 26,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //58
 
         canvas.fillColor = Color(hue: 0,
@@ -1521,8 +1354,7 @@ extension Canvas {
               brightness: 32,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //59
 
         canvas.fillColor = Color(hue: 334,
@@ -1530,8 +1362,7 @@ extension Canvas {
               brightness: 29,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //60
 
         canvas.fillColor = Color(hue: 339,
@@ -1539,8 +1370,7 @@ extension Canvas {
               brightness: 30,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 225), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 225 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 11
 
         //61
@@ -1550,8 +1380,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //62
 
         canvas.fillColor = Color(hue: 0,
@@ -1559,8 +1388,7 @@ extension Canvas {
               brightness: 81,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //63
 
         canvas.fillColor = Color(hue: 12,
@@ -1568,8 +1396,7 @@ extension Canvas {
               brightness: 12,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //64
 
         canvas.fillColor = Color(hue: 328,
@@ -1577,8 +1404,7 @@ extension Canvas {
               brightness: 16,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //65
 
         canvas.fillColor = Color(hue: 10,
@@ -1586,8 +1412,7 @@ extension Canvas {
               brightness: 61,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //66
 
         canvas.fillColor = Color(hue: 16,
@@ -1595,8 +1420,7 @@ extension Canvas {
               brightness: 45,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //67
 
         canvas.fillColor = Color(hue: 12,
@@ -1604,8 +1428,7 @@ extension Canvas {
               brightness: 49,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //68
 
         canvas.fillColor = Color(hue: 18,
@@ -1613,8 +1436,7 @@ extension Canvas {
               brightness: 70,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //69
 
         canvas.fillColor = Color(hue: 22,
@@ -1622,8 +1444,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //70
 
         canvas.fillColor = Color(hue: 20,
@@ -1631,8 +1452,7 @@ extension Canvas {
               brightness: 90,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //71
 
         canvas.fillColor = Color(hue: 12,
@@ -1640,8 +1460,7 @@ extension Canvas {
               brightness: 39,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //72
 
         canvas.fillColor = Color(hue: 348,
@@ -1649,8 +1468,7 @@ extension Canvas {
               brightness: 23,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //73
 
         canvas.fillColor = Color(hue: 352,
@@ -1658,8 +1476,7 @@ extension Canvas {
               brightness: 20,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //74
 
         canvas.fillColor = Color(hue: 353,
@@ -1667,8 +1484,7 @@ extension Canvas {
               brightness: 24,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //75
 
         canvas.fillColor = Color(hue: 339,
@@ -1676,8 +1492,7 @@ extension Canvas {
               brightness: 23,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //76
 
         canvas.fillColor = Color(hue: 358,
@@ -1685,8 +1500,7 @@ extension Canvas {
               brightness: 60,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 250), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 250 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 12 AYEE
 
         //77
@@ -1696,8 +1510,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //78
 
         canvas.fillColor = Color(hue: 7,
@@ -1705,8 +1518,7 @@ extension Canvas {
               brightness: 93,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //79
 
         canvas.fillColor = Color(hue: 341,
@@ -1714,8 +1526,7 @@ extension Canvas {
               brightness: 24,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //80
 
         canvas.fillColor = Color(hue: 297,
@@ -1723,8 +1534,7 @@ extension Canvas {
               brightness: 10,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //81
 
         canvas.fillColor = Color(hue: 11,
@@ -1732,8 +1542,7 @@ extension Canvas {
               brightness: 59,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //82
 
         canvas.fillColor = Color(hue: 13,
@@ -1741,8 +1550,7 @@ extension Canvas {
               brightness: 78,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //83
 
         canvas.fillColor = Color(hue: 18,
@@ -1750,8 +1558,7 @@ extension Canvas {
               brightness: 89,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //84
 
         canvas.fillColor = Color(hue: 22,
@@ -1759,8 +1566,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //85
 
         canvas.fillColor = Color(hue: 24,
@@ -1768,8 +1574,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //86
 
         canvas.fillColor = Color(hue: 21,
@@ -1777,8 +1582,7 @@ extension Canvas {
               brightness: 94,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //87
 
         canvas.fillColor = Color(hue: 16,
@@ -1786,8 +1590,7 @@ extension Canvas {
               brightness: 54,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //88
 
         canvas.fillColor = Color(hue: 353,
@@ -1795,8 +1598,7 @@ extension Canvas {
               brightness: 23,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //89
 
         canvas.fillColor = Color(hue: 352,
@@ -1804,8 +1606,7 @@ extension Canvas {
               brightness: 20,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //90
 
         canvas.fillColor = Color(hue: 340,
@@ -1813,8 +1614,7 @@ extension Canvas {
               brightness: 20,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //91
 
         canvas.fillColor = Color(hue: 347,
@@ -1822,8 +1622,7 @@ extension Canvas {
               brightness: 31,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //92
 
         canvas.fillColor = Color(hue: 5,
@@ -1831,8 +1630,7 @@ extension Canvas {
               brightness: 88,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 275), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 275 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 13333
 
         //93
@@ -1842,8 +1640,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //94
 
         canvas.fillColor = Color(hue: 2,
@@ -1851,8 +1648,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //95
 
         canvas.fillColor = Color(hue: 359,
@@ -1860,8 +1656,7 @@ extension Canvas {
               brightness: 51,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //96
 
         canvas.fillColor = Color(hue: 320,
@@ -1869,8 +1664,7 @@ extension Canvas {
               brightness: 12,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //97
 
         canvas.fillColor = Color(hue: 9,
@@ -1878,8 +1672,7 @@ extension Canvas {
               brightness: 40,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //98
 
         canvas.fillColor = Color(hue: 13,
@@ -1887,8 +1680,7 @@ extension Canvas {
               brightness: 73,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //99
 
         canvas.fillColor = Color(hue: 18,
@@ -1896,8 +1688,7 @@ extension Canvas {
               brightness: 89,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //100
 
         canvas.fillColor = Color(hue: 21,
@@ -1905,8 +1696,7 @@ extension Canvas {
               brightness: 93,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //101
 
         canvas.fillColor = Color(hue: 22,
@@ -1914,8 +1704,7 @@ extension Canvas {
               brightness: 95,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //102
 
         canvas.fillColor = Color(hue: 18,
@@ -1923,8 +1712,7 @@ extension Canvas {
               brightness: 90,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //103
 
         canvas.fillColor = Color(hue: 10,
@@ -1932,8 +1720,7 @@ extension Canvas {
               brightness: 38,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //104
 
         canvas.fillColor = Color(hue: 346,
@@ -1941,8 +1728,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //105
 
         canvas.fillColor = Color(hue: 339,
@@ -1950,8 +1736,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //106
 
         canvas.fillColor = Color(hue: 333,
@@ -1959,8 +1744,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //107
 
         canvas.fillColor = Color(hue: 0,
@@ -1968,8 +1752,7 @@ extension Canvas {
               brightness: 57,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //108
 
         canvas.fillColor = Color(hue: 6,
@@ -1977,8 +1760,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 300), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 300 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 14
 
         //9
@@ -1988,8 +1770,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //10
 
         canvas.fillColor = Color(hue: 6,
@@ -1997,8 +1778,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //11
 
         canvas.fillColor = Color(hue: 5,
@@ -2006,8 +1786,7 @@ extension Canvas {
               brightness: 64,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //12
 
         canvas.fillColor = Color(hue: 347,
@@ -2015,8 +1794,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //13
 
         canvas.fillColor = Color(hue: 354,
@@ -2024,8 +1802,7 @@ extension Canvas {
               brightness: 17,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //14
 
         canvas.fillColor = Color(hue: 10,
@@ -2033,8 +1810,7 @@ extension Canvas {
               brightness: 51,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //15
 
         canvas.fillColor = Color(hue: 14,
@@ -2042,8 +1818,7 @@ extension Canvas {
               brightness: 77,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //16
 
         canvas.fillColor = Color(hue: 18,
@@ -2051,8 +1826,7 @@ extension Canvas {
               brightness: 89,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //17
 
         canvas.fillColor = Color(hue: 16,
@@ -2060,8 +1834,7 @@ extension Canvas {
               brightness: 86,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //18
 
         canvas.fillColor = Color(hue: 15,
@@ -2069,8 +1842,7 @@ extension Canvas {
               brightness: 61,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //19
 
         canvas.fillColor = Color(hue: 346,
@@ -2078,8 +1850,7 @@ extension Canvas {
               brightness: 19,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //20
 
         canvas.fillColor = Color(hue: 349,
@@ -2087,8 +1858,7 @@ extension Canvas {
               brightness: 16,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //21
 
         canvas.fillColor = Color(hue: 323,
@@ -2096,8 +1866,7 @@ extension Canvas {
               brightness: 15,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //22
 
         canvas.fillColor = Color(hue: 352,
@@ -2105,8 +1874,7 @@ extension Canvas {
               brightness: 34,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //23
 
         canvas.fillColor = Color(hue: 4,
@@ -2114,8 +1882,7 @@ extension Canvas {
               brightness: 93,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //24
 
         canvas.fillColor = Color(hue: 4,
@@ -2123,8 +1890,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 325), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 325 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 15
 
         //25
@@ -2134,8 +1900,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //26
 
         canvas.fillColor = Color(hue: 5,
@@ -2143,8 +1908,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //27
 
         canvas.fillColor = Color(hue: 8,
@@ -2152,8 +1916,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //28
 
         canvas.fillColor = Color(hue: 2,
@@ -2161,8 +1924,7 @@ extension Canvas {
               brightness: 62,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //29
 
         canvas.fillColor = Color(hue: 347,
@@ -2170,8 +1932,7 @@ extension Canvas {
               brightness: 18,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //30
 
         canvas.fillColor = Color(hue: 355,
@@ -2179,8 +1940,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //31
 
         canvas.fillColor = Color(hue: 10,
@@ -2188,8 +1948,7 @@ extension Canvas {
               brightness: 36,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //32
 
         canvas.fillColor = Color(hue: 9,
@@ -2197,8 +1956,7 @@ extension Canvas {
               brightness: 44,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //33
 
         canvas.fillColor = Color(hue: 3,
@@ -2206,8 +1964,7 @@ extension Canvas {
               brightness: 28,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //34
 
         canvas.fillColor = Color(hue: 322,
@@ -2215,8 +1972,7 @@ extension Canvas {
               brightness: 12,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //35
 
         canvas.fillColor = Color(hue: 333,
@@ -2224,8 +1980,7 @@ extension Canvas {
               brightness: 16,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //36
 
         canvas.fillColor = Color(hue: 340,
@@ -2233,8 +1988,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //37
 
         canvas.fillColor = Color(hue: 340,
@@ -2242,8 +1996,7 @@ extension Canvas {
               brightness: 21,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //38
 
         canvas.fillColor = Color(hue: 2,
@@ -2251,8 +2004,7 @@ extension Canvas {
               brightness: 84,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //39
 
         canvas.fillColor = Color(hue: 4,
@@ -2260,8 +2012,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //40
 
         canvas.fillColor = Color(hue: 2,
@@ -2269,8 +2020,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 350), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 350 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //ROW 16 LAST ONE WOOO
 
         //41
@@ -2280,8 +2030,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 0, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 0 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //42
 
         canvas.fillColor = Color(hue: 6,
@@ -2289,8 +2038,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 25, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 25 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //43
 
         canvas.fillColor = Color(hue: 4,
@@ -2298,8 +2046,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 50, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 50 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //44
 
         canvas.fillColor = Color(hue: 6,
@@ -2307,8 +2054,7 @@ extension Canvas {
               brightness: 96,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 75, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 75 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //45
 
         canvas.fillColor = Color(hue: 2,
@@ -2316,8 +2062,7 @@ extension Canvas {
               brightness: 73,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 100, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 100 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //46
 
         canvas.fillColor = Color(hue: 351,
@@ -2325,8 +2070,7 @@ extension Canvas {
               brightness: 31,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 125, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 125 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //47
 
         canvas.fillColor = Color(hue: 306,
@@ -2334,8 +2078,7 @@ extension Canvas {
               brightness: 9,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 150, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 150 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //48
 
         canvas.fillColor = Color(hue: 262,
@@ -2343,8 +2086,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 175, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 175 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //49
 
         canvas.fillColor = Color(hue: 271,
@@ -2352,8 +2094,7 @@ extension Canvas {
               brightness: 8,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 200, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 200 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //50
 
         canvas.fillColor = Color(hue: 327,
@@ -2361,8 +2102,7 @@ extension Canvas {
               brightness: 14,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 225, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 225 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //51
 
         canvas.fillColor = Color(hue: 335,
@@ -2370,8 +2110,7 @@ extension Canvas {
               brightness: 17,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 250, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 250 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //52
 
         canvas.fillColor = Color(hue: 335,
@@ -2379,8 +2118,7 @@ extension Canvas {
               brightness: 24,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 275, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 275 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //53
 
         canvas.fillColor = Color(hue: 4,
@@ -2388,8 +2126,7 @@ extension Canvas {
               brightness: 79,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 300, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 300 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //54
 
         canvas.fillColor = Color(hue: 4,
@@ -2397,8 +2134,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 325, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 325 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //55
 
         canvas.fillColor = Color(hue: 2,
@@ -2406,8 +2142,7 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 350, y: 375), width: 25, height: 25)
-
+        canvas.drawRectangle(at: Point(x: 350 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
         //56
 
         canvas.fillColor = Color(hue: 2,
@@ -2415,21 +2150,29 @@ extension Canvas {
               brightness: 97,
               alpha: 100)
 
-        canvas.drawRectangle(at: Point(x: 375, y: 375), width: 25, height: 25)
-         
+        canvas.drawRectangle(at: Point(x: 375 / reductionFactor + xPosition, y: 375 / reductionFactor + yPosition), width: 25 / reductionFactor, height: 25 / reductionFactor )
 
         
     }
 }
 
+//ok so doing a loop now besties
+
+for xPosition in stride(from: 0, to: 400, by: 80) {
+    for yPosition in stride(from: 0, to: 400, by: 80){
+     
+        
+        canvas.drawMitskiPixels(xPosition: xPosition, yPosition: yPosition, reductionFactor: 5)
+    }
+}
+
+
+//// Show a grid
+//canvas.drawAxes(withScale: true, by: 50, color: .white)
 
 
 
-
-//ok so thinking colour scheme i want like darker blues so the backround is going to be the darkest blue we should go with a a rectangle to do it mkay.
-
-//due to new design backround will be delayed
-canvas.drawMitskiPixels(xPosition: 0, yPosition: 0)
+canvas.textColor = .white
 
 //// Show a grid
 //canvas.drawAxes(withScale: true, by: 50, color: .white)
@@ -2445,21 +2188,6 @@ canvas.drawText(message: "march 18, 2022", at: Point(x: 20, y: 560), size: 8)
 canvas.drawText(message: "occuring at massey hall", at: Point(x: 270, y: 572), size: 8)
 
 canvas.drawText(message: "toronto ontario", at: Point(x: 270, y: 560), size: 8)
-
-//ok so making a function/loop. It will be hard not to cry.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
