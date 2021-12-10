@@ -31,9 +31,6 @@ PlaygroundPage.current.liveView = canvas
 
 
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .red)
-
 canvas.highPerformance = true
 
 //rectangleee
@@ -2158,11 +2155,11 @@ extension Canvas {
 
 //ok so doing a loop now besties
 
-for xPosition in stride(from: 0, to: 400, by: 80) {
-    for yPosition in stride(from: 0, to: 400, by: 80){
+for xPosition in stride(from: 0, to: 400, by: 200) {
+    for yPosition in stride(from: 0, to: 400, by: 200){
      
         
-        canvas.drawMitskiPixels(xPosition: xPosition, yPosition: yPosition, reductionFactor: 5)
+        canvas.drawMitskiPixels(xPosition: xPosition, yPosition: yPosition, reductionFactor: 2)
     }
 }
 
