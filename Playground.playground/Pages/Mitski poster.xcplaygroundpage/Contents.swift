@@ -42,9 +42,18 @@ canvas.drawAxes(withScale: true, by: 50, color: .red)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+
+canvas.highPerformance = true
+
 //ok so thinking colour scheme i want like darker blues so the backround is going to be the darkest blue we should go with a a rectangle to do it mkay.
 
 //due to new design backround will be delayed
+
+
+canvas.fillColor = .black
+
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
 
 //1
 
@@ -2404,109 +2413,22 @@ canvas.fillColor = Color(hue: 2,
 
 canvas.drawRectangle(at: Point(x: 375, y: 375), width: 25, height: 25)
 
+//// Show a grid
+//canvas.drawAxes(withScale: true, by: 50, color: .white)
 
+canvas.textColor = .white
 
+canvas.drawText(message: "mitski", at: Point(x: 20, y: 420), size: 40)
 
+canvas.drawText(message: "friday", at: Point(x: 20, y: 572), size: 8)
 
+canvas.drawText(message: "march 18, 2022", at: Point(x: 20, y: 560), size: 8)
 
+canvas.drawText(message: "occuring at massey hall", at: Point(x: 270, y: 572), size: 8)
 
+canvas.drawText(message: "toronto ontario", at: Point(x: 270, y: 560), size: 8)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+canvas.highPerformance = false
 
 /*:
  ## Show the Live View
